@@ -11,4 +11,4 @@ const setupI18n = async ({ withLocale }) => {
   }
 };
 
-export default setupI18n;
+export { setupI18n, locale };

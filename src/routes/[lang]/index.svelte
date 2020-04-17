@@ -27,7 +27,7 @@
 </style>
 
 <script context="module">
-  import setupI18n from "../../utils/setup-i18n";
+  import { setupI18n, locale } from "../../utils/setup-i18n";
 
   export async function preload({ params }) {
     try {
@@ -39,7 +39,7 @@
 </script>
 
 <script>
-  import { t, locale } from "svelte-i18n";
+  import { t } from "svelte-i18n";
   import mobileLangs from "../../constants/mobile-langs";
 
   import { onMount } from "svelte";
@@ -50,6 +50,8 @@
   onMount(() => {
     setFonts({ withLocale: "en" });
   });
+
+  console.log($locale)
 </script>
 
 <main>

@@ -1,5 +1,17 @@
 <style>
+  .select {
+    display: flex;
+    flex-flow: column nowrap;
+  }
 
+  .select a {
+    color: black;
+    transition: 0.3s;
+  }
+
+  .select a:hover{
+    color: #35a947;
+  }
 </style>
 
 <script>
@@ -10,16 +22,16 @@
     event.preventDefault();
 
     const { value } = event.target;
-    window.location.href = `/${value}`
+    window.location.href = `/${value}`;
   }
+
+  console.log(value);
 </script>
 
 <div class="locale-selector">
   <div class="select">
-    <select {value} on:change="{handleLocaleChange}">
-      {#each mobileLangs as lang}
-        <option value="{lang.shortname}">{lang.title}</option>
-      {/each}
-    </select>
+    {#each mobileLangs as lang}
+      <a href="/{lang.shortname}/">{lang.title}</a>
+    {/each}
   </div>
 </div>
