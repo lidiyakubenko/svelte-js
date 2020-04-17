@@ -50,8 +50,6 @@
   onMount(() => {
     setFonts({ withLocale: "en" });
   });
-
-  console.log($locale)
 </script>
 
 <main>
