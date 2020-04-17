@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "sapper dev --no-hot",
-    "export": "NODE_ENV=production sapper export dist"
+    "export": "NODE_ENV=production sapper export dist",
+    "build": "sapper build",
+    "start": "node __sapper__/build"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
